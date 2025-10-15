@@ -14,12 +14,11 @@ static inline int is_name_in_list(const char* name, int X, char* names) {
 }
 
 int main() {
-    int N;
+    int N, X;
+    char name[11] = {0,};
     scanf("%d", &N);
     char* names = (char*)malloc(N * 11 * sizeof(char));
     input_names(names, N);
-    int X;
-    char name[11] = {0,};
     scanf("%d\n%10s", &X, name);
     if(is_name_in_list(name, X, names) == 0) {
         printf("YES\n");
