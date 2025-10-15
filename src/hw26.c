@@ -4,7 +4,7 @@
 
 void add_UPC(char* source, int len, char* target) {
     const char* UPC = "UPC";
-    if(len == 1) {
+    if(len == 1) {                                  //문자열 길이가 1일경우에는 문자열의 왼쪽에 문자가 들어가야하므로 따로 작성
         memcpy(target, UPC, 3);
         target[3] = *source;
         memcpy(target + 4, UPC, 3);
