@@ -9,7 +9,7 @@ const char* translate(const char* str) {
             return new_word[i];
         }
     }
-    return "Unknown";
+    return "Unknown";                               // 문자열은 .rodata에 저장됨으로 복사하지 않고 주소값만 반환
 }
 
 int main() {

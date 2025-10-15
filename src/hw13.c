@@ -3,14 +3,14 @@
 #include <string.h>
 
 void input_names(char* names, int N) {
-    memset(names, 0, N * 11 * sizeof(char));
+    memset(names, 0, N * 11 * sizeof(char));    // 문자열 배열
     for (int i = 0; i < N; i++) {
         scanf("%10s", names + (i * 11));
     }
 }
 
 static inline int is_name_in_list(const char* name, int X, char* names) {
-    return strcmp(names + ((X - 1) * 11), name);
+    return strcmp(names + ((X - 1) * 11), name);        // 문자열 배열에서 X번째 문자열과 비교
 }
 
 int main() {

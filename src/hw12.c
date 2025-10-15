@@ -4,9 +4,9 @@ void generate_triangle(int n, int* tri) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j <= i; j++) {
             if (j == 0 || j == i) {
-                tri[i * n + j] = 1;
+                tri[i * n + j] = 1; // 가장자리 값은 1
             } else {
-                tri[i * n + j] = tri[(i - 1) * n + (j - 1)] + tri[(i - 1) * n + j];
+                tri[i * n + j] = tri[(i - 1) * n + (j - 1)] + tri[(i - 1) * n + j]; // 위의 두 값의 합
             }
         }
     }

@@ -15,7 +15,7 @@ void substring(const char *source, int from, int to, char *target) {
 
 int main() {
     const char text[] = "beautiful";
-    char sub[sizeof(text) / sizeof(*text)] = {0};
+    char sub[sizeof(text) / sizeof(*text)] = {0};   //잘린 문자열의 길이는 원본보다 짧거나 같음
     int l,r;
     scanf("%d %d", &l, &r);
     substring(text, l, r, sub);

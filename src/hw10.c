@@ -5,8 +5,8 @@ typedef struct __Time {
 } Time;
 Time add_time(const Time t1, const Time t2) {
     Time result;
-    result.hour = (t1.hour + t2.hour + (t1.minute + t2.minute) / 60) % 24;
-    result.minute = (t1.minute + t2.minute) % 60;
+    result.hour = (t1.hour + t2.hour + (t1.minute + t2.minute) / 60) % 24;  // 24시간 형식, 분이 60분 넘으면 시간에 그만큼 추가
+    result.minute = (t1.minute + t2.minute) % 60;                           // 분은 60분 형식
     return result;
 }
 int main() {
